@@ -1,7 +1,19 @@
 import React from 'react';
 
 class CartItem extends React.Component{
+
+    constructor(){
+        super();
+        this.state={
+            
+            price:999,
+            title:'Mobile Phone',
+            qty:1,
+            img:''
+        }
+    }
     render(){
+        const {price,title,qty}=this.state;
         return(
      <div className='cart-item'>
         <div className=''>
@@ -9,11 +21,14 @@ class CartItem extends React.Component{
         </div>
 
         <div className='right-block'>
-             <div style={{fontSize:25}}>Phone</div>
-             <div style={{color:'#777'}}>Rs 999</div>
-             <div style={{color:'#777'}}>Qty:1</div>
+             <div style={{fontSize:25}}>{title}</div>
+             <div style={{color:'#777'}}>Rs {price}</div>
+             <div style={{color:'#777'}}>Qty:{qty}</div>
              <div className='cart-item-actions'>
-                 /*buttons*/
+                 
+                 <img alt='increase' src='https://cdn-icons-png.flaticon.com/512/992/992651.png' className='action-icons'></img>
+                 <img alt='decrease' src='https://cdn-icons-png.flaticon.com/512/992/992683.png' className='action-icons'></img>
+                 <img alt='delete' src='https://cdn-icons.flaticon.com/png/512/3405/premium/3405244.png?token=exp=1658464411~hmac=a80c2d5deb7ce30264caa6c58f286d1c' className='action-icons'></img>
              </div>
         </div>
      </div>
