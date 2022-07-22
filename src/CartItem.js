@@ -15,6 +15,14 @@ class CartItem extends React.Component{
     }
     increaseQuantity=()=>{
         console.log(this.state);
+    //    this.setState({
+    //     qty:this.state.qty+1  //prevstate not required, title change eg.
+    //    });
+     this.setState((prevState)=>{ //prevstate reqd.
+       return{
+        qty:prevState.qty+1
+       }
+     })
     }
     render(){
         const {price,title,qty}=this.state;
