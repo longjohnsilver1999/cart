@@ -1,6 +1,6 @@
 import React from 'react';
 
-class CartItem extends React.Component{
+const CartItem =(props)=>{
 //we dont need the state
    
         //this.increaseQuantity=this.increaseQuantity.bind(this);
@@ -28,14 +28,13 @@ class CartItem extends React.Component{
     //         }
     //     })
     // }
-    render(){
-        console.log("this.props",this.props);
-        const {price,title,qty}=this.props.product;
+    
+        const {price,title,qty}=props.product;
         const {product,
             onIncreaseQuantity,
             onDecreaseQuantity,
             onDeleteProduct
-        }=this.props;
+        }=props;
         return(
      <div className='cart-item'>
         <div className=''>
@@ -66,7 +65,7 @@ class CartItem extends React.Component{
 
                  <img 
                  alt='delete' 
-                 src='https://cdn-icons.flaticon.com/png/512/3405/premium/3405244.png?token=exp=1658751527~hmac=92e0e4f06f86a878467c65b4d3eac8ae' 
+                 src='https://cdn-icons-png.flaticon.com/512/6861/6861362.png' 
                  className='action-icons'
                  onClick={()=>{
                     onDeleteProduct(product.id)
@@ -78,7 +77,7 @@ class CartItem extends React.Component{
 
         );
     }
-}
+
 
 const styles={
     image:{

@@ -12,7 +12,7 @@ const Navbar =(props)=>{
        <div style={styles.nav}>
           <div style={styles.cartIconContainer}>
             <img style={styles.cartIcon} alt='cart-icon' src='https://cdn-icons-png.flaticon.com/512/833/833314.png'/>
-              <span style={styles.cartCount}>3</span>
+              <span style={styles.cartCount}>{props.count}</span>
           </div>
        </div>
      
