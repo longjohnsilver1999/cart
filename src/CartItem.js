@@ -17,20 +17,25 @@ class CartItem extends React.Component{
     //  })
     // }
 
-    decreaseQuantity=()=>{
-        const {qty}=this.state;
-        if(qty===0){
-            return;
-        }
-        this.setState((prevState)=>{
-            return{
-                qty:prevState.qty-1
-            }
-        })
-    }
+    // decreaseQuantity=()=>{
+    //     const {qty}=this.state;
+    //     if(qty===0){
+    //         return;
+    //     }
+    //     this.setState((prevState)=>{
+    //         return{
+    //             qty:prevState.qty-1
+    //         }
+    //     })
+    // }
     render(){
         console.log("this.props",this.props);
         const {price,title,qty}=this.props.product;
+        const {product,
+            onIncreaseQuantity,
+            onDecreaseQuantity,
+            onDeleteProduct
+        }=this.props;
         return(
      <div className='cart-item'>
         <div className=''>
@@ -47,7 +52,7 @@ class CartItem extends React.Component{
                   alt='increase' src='https://cdn-icons-png.flaticon.com/512/992/992651.png' 
                   className='action-icons'
                   onClick={()=>{
-                    this.props.onIncreaseQuantity(this.props.product)
+                    onIncreaseQuantity(product)
                   }}
                  ></img>
 
@@ -55,12 +60,18 @@ class CartItem extends React.Component{
                  alt='decrease' 
                  src='https://cdn-icons-png.flaticon.com/512/992/992683.png' 
                  className='action-icons'
-                 onClick={this.decreaseQuantity}></img>
+                 onClick={()=>{
+                    onDecreaseQuantity(product)
+                  }} />
 
                  <img 
                  alt='delete' 
                  src='https://cdn-icons.flaticon.com/png/512/3405/premium/3405244.png?token=exp=1658711910~hmac=3751081ba9bbd2c15c45f39e6d50b5ea' 
-                 className='action-icons'></img>
+                 className='action-icons'
+                 onClick={()=>{
+                    onDeleteProduct(product.id)
+                 }}
+                 ></img>
              </div>
         </div>
      </div>
