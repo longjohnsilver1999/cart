@@ -78,9 +78,9 @@ getCartCount=()=>{
   getCartTotal=()=>{
     const {products}=this.state;
     let cartTotal=0;
-    products.map((product)=>{
+    products.map((product)=>
         cartTotal=cartTotal +(product.qty*product.price);
-    })
+    )
     return cartTotal;
   }
   render (){
