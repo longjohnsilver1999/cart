@@ -80,7 +80,7 @@ getCartCount=()=>{
     let cartTotal=0;
     products.map((product)=>{
         cartTotal=cartTotal +(product.qty*product.price);
-    } )
+    })
     return cartTotal;
   }
   render (){
