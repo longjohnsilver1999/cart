@@ -1,0 +1,14 @@
+{
+    "name": "Java Development",
+    "dockerFile": "Dockerfile",
+  
+    "settings": {
+      "java.home": "/usr/local/openjdk-11",
+      "maven.executablePath": "/usr/share/maven/bin/mvn"
+    },
+  
+    "extensions": [
+      "vscjava.vscode-java-pack"
+    ]
+  }
+  
