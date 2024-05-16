@@ -6,11 +6,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class funController {
 @GetMapping("/")
 public String sayHello(){
-    return "tushar dns ki ";
+    return "tushar dns";
 }
   @GetMapping("/start")
 public String sayHello1(){
-    return "hello start ";
+    return "hello startlll ";
 }  
 
 @GetMapping("/signin")
