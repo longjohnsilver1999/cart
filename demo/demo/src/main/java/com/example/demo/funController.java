@@ -10,7 +10,7 @@ public String sayHello(){
 }
   @GetMapping("/start")
 public String sayHello1(){
-    return "tushar dns ki sta000lrt";
+    return "hello start tushar";
 }  
 
 @GetMapping("/signin")
