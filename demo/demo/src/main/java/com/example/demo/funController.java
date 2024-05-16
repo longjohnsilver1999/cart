@@ -8,6 +8,14 @@ public class funController {
 public String sayHello(){
     return "tushar dns ki mehnat";
 }
-    
+  @GetMapping("/start")
+public String sayHello1(){
+    return "tushar dns ki start";
+}  
+
+@GetMapping("/signin")
+public String sayHello1q(){
+    return "sign in u idiot";
+}  
 }
 
