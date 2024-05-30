@@ -18,28 +18,38 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>3.2.5</version>
+            <version>${spring-boot.version}</version>
         </dependency>
-<dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <version>${spring-boot.version}</version>
+            <scope>runtime</scope> <!-- Added scope tag -->
         </dependency>
         <!-- Spring Boot Starter Test -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <version>${spring-boot.version}</version>
-            <!-- <scope>test</scope> -->
+            <scope>test</scope> <!-- Added scope tag -->
         </dependency>
-      <dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
     <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-actuator</artifactId>
-    <version>3.2.5</version>
+    <artifactId>spring-boot-configuration-processor</artifactId>
+    <version>${spring-boot.version}</version>
+    <optional>true</optional>
 </dependency>
 
-
-        
     </dependencies>
 
     <build>
@@ -48,7 +58,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>3.2.5</version>
+                <version>${spring-boot.version}</version>
             </plugin>
         </plugins>
     </build>
