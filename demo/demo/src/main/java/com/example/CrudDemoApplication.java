@@ -4,7 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.boot.CommandLineRunner;
-
+import com.example.entity.Student;
+import com.example.dao.StudentDAO;
+import java.util.List;
 
 @SpringBootApplication
 public class CrudDemoApplication {
@@ -16,7 +18,7 @@ public class CrudDemoApplication {
 	// The @Bean annotation indicates that this method produces a Spring Bean to be managed by the 
 	// Spring container.
     @Bean
-	public CommandLineRunner commandLineRunner(String[] args){
+	public CommandLineRunner commandLineRunner(StudentDAO studentDAO){
 		//Java lambda expression
 		return runner -> {		
 			// createStudent(studentDAO);
