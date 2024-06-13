@@ -16,7 +16,7 @@ public class WorkerRestController {
     private List<Worker> theWorkers;
     // define endpoint for "/workers" - return a list of workers
     @PostConstruct
-    public void loadData() {
+    public List<Worker> loadData() {
         theWorkers = new ArrayList<>();
 
         theWorkers.add(new Worker("Poornima", "Patel"));
